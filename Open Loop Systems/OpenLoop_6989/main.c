@@ -29,6 +29,9 @@ int main(void)
     showChar('0',4);
     showChar('0',5);
     showChar('C',6);
+    /**
+     * Initialization inspired by TI resource center.
+     */
 
     /* P1.0 Signal that turns fan on/off.*/
     P1DIR |= BIT0;                          // Set P1.0 to output direction
@@ -102,7 +105,7 @@ int main(void)
 
 
 
-/* ADC Interrupt*/
+/* ADC Interrupt inspired by TI*/
 #if defined(__TI_COMPILER_VERSION__) || defined(__IAR_SYSTEMS_ICC__)
 #pragma vector = ADC12_VECTOR
 __interrupt void ADC12_ISR(void)
